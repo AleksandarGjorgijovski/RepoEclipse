@@ -32,6 +32,15 @@ public class Base {
 		driver.get(homeUrl);
 		driver.manage().window().maximize();
 	}
+	public void testTeardown() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.quit();
+	}
 	
 	public static void captureScreenshot(String screenshotName ) {
 		try {

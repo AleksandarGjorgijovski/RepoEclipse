@@ -26,9 +26,8 @@ public class DynamicTableAlertsFrames {
 		driver.manage().window().maximize();
 	}
 	@AfterMethod
-	public void testTeardown() throws InterruptedException {
-		Thread.sleep(3000);
-		driver.quit();
+	public void testTeardown() {
+		testTeardown();
 	}
 	@Test
 	public void dynamicTableUi() {
